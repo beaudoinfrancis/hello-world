@@ -1,0 +1,20 @@
+on:
+  workflow_run:
+    workflows:
+      - 'workflow'
+    types:
+      - requested
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add your workflow steps here
+      - name: Build and Test
+        run: |
+          # Build and test commands go here
+          echo "Main"
