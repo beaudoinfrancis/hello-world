@@ -17,4 +17,4 @@ jobs:
       - name: Build and Test
         run: |
           # Build and test commands go here
-          echo "Main"
+          exit 1
